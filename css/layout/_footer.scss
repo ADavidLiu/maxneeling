@@ -1,0 +1,204 @@
+.footer {
+    margin-top: 6.667rem;
+    position: relative;
+    @include atSmall {
+        margin-top: 6.6875rem;
+        padding-bottom: 14.0625rem;
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+    @include atMedium {
+        margin-top: 19.375rem;
+        padding-bottom: 12.5rem;
+        padding-left: 4.375rem;
+        padding-right: 4.375rem;
+    }
+
+    &__headline {
+        @include atMedium {
+            position: absolute;
+            z-index: 1;
+            left: 15px;
+            top: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__main {
+        @include atMedium {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: calc(100% - 208px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &:before,
+        &:after {
+            @include atMedium {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 150vw;
+                left: -50vw;
+                background-color: $color-gray-dark;
+            }
+        }
+
+        &:before {
+            @include atMedium {
+                top: 0;
+            }
+        }
+
+        &:after {
+            @include atMedium {
+                bottom: 14.875rem;
+            }
+        }
+    }
+
+    &__title,
+    &__content {
+        padding: 0 15px;
+        @include atSmall {
+            width: 65%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        padding-left: 0;
+        padding-right: 0;
+        @include atMedium {
+            margin-left: calc(15px + 2.375rem);
+        }
+        @include atLarge {
+            width: auto;
+        }
+
+        .content {
+            padding-left: 30px;
+            padding-right: 30px;
+            @include atSmall {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__title {
+        @include atSmall {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+        }
+    }
+
+    &__info {
+        margin-top: 1.75rem;
+        padding: 0 15px;
+        @include atSmall {
+            margin-top: 0.9375rem;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            margin-bottom: 2.6875rem;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @include atMedium {
+            margin-top: 1.25rem;
+            display: block;
+        }
+
+        &-copy {
+            @include atSmall {
+                width: 50%;
+            }
+        }
+
+        &-item {
+            & + & {
+                margin-top: 1.333rem;
+                @include atSmall {
+                    margin-top: 0.875rem;
+                }
+                @include atMedium {
+                    margin-top: 0.75rem;
+                }
+            }
+        }
+    }
+
+    &__social {
+        margin-top: 1.333rem;
+        margin-left: -1.5rem;
+        transform: translateY(50%);
+        @include atSmall {
+            margin-left: 2.9375rem;
+            width: 50%;
+            transform: none;
+            justify-content: flex-end;
+        }
+        @include atMedium {
+            justify-content: flex-start;
+            margin-left: 0;
+            margin-top: 2.1875rem;
+        }
+    }
+
+    &__form {
+        background-color: $color-gray;
+        box-shadow: 0 10px 10px rgba(#B0B0B0, .5);
+        padding: 5rem 15px 3.333rem 15px;
+        position: relative;
+        z-index: 1;
+        @include atSmall {
+            padding: 2.5rem 2.5rem 4.6875rem 3.75rem;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include atMedium {
+            margin-right: 15px;
+            margin-left: 1.875rem;
+            padding-bottom: 3.375rem;
+        }
+        @include atLarge {
+            flex: 1;
+            max-width: 520px;
+        }
+
+        &:before,
+        &:after {
+            @include atSmall {
+                content: "";
+                position: absolute;
+                left: -50vw;
+                height: 2px;
+                width: 150vw;
+                background-color: $color-gray-dark;
+            }
+            @include atMedium {
+                display: none;
+            }
+        }
+
+        &:before {
+            @include atSmall {
+                top: 0;
+            }
+        }
+
+        &:after {
+            @include atSmall {
+                bottom: 0;
+            }
+        }
+    }
+}

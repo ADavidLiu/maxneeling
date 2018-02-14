@@ -1,0 +1,115 @@
+.form {
+    &__group {
+        @include atSmall {
+            width: calc(50% - 1.25rem);
+        }
+
+        & + & {
+            margin-top: 3.0833rem;
+            @include atSmall {
+                margin-top: 0;
+            }
+        }
+
+        &--full {
+            @include atSmall {
+                width: 100%;
+                margin-top: 1.5625rem !important;
+            }
+        }
+    }
+
+    &__content {
+        padding-right: 1.5rem;
+        margin-top: 3.8333rem;
+        @include atSmall {
+            padding: 0;
+            margin-top: 2.875rem;
+            padding-left: 0 !important;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        @include atMedium {
+            
+        }
+    }
+
+    &__label {
+        font-size: 1.833rem;
+        line-height: 2.833rem;
+        color: $color-black;
+        font-family: $font-hvy;
+        margin-bottom: 7px;
+        @include atSmall {
+            font-size: 1rem;
+            line-height: 1.375rem;
+        }
+    }
+
+    &__input {
+        font-family: $font-hvy;
+        color: $color-black;
+        padding-bottom: 9px;
+        border-bottom: 1px solid #D8D8D8;
+        font-size: 1.667rem;
+        line-height: 2.833rem;
+        background-color: transparent;
+        width: 100%;
+        transition: all .25s;
+        @include atSmall {
+            font-size: 1rem;
+            line-height: 1.375rem;
+        }
+
+        &--textarea {
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+            padding-bottom: 8.25rem;
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 0;
+            resize: none;
+        }
+
+        &::placeholder {
+            color: rgba($color-black, .3);
+            @include atSmall {
+                color: rgba($color-black, .1);
+            }
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $color-primary;
+        }
+    }
+
+    &__btn {
+        padding: 0;
+        @include atSmall {
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            right: -1.25rem;
+            transform: translateY(50%);
+        }
+    }
+
+    &:after {
+        @include atSmall {
+            content: "";
+            bottom: -35.25px;
+            left: -50vw;
+            height: 2px;
+            width: 150vw;
+            background-color: $color-gray-dark;
+            position: absolute;
+        }
+        @include atMedium {
+            bottom: -10px;
+        }
+    }
+}

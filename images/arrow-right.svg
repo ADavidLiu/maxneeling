@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="15px" viewBox="0 0 10 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-195.000000, -2167.000000)" opacity="0.5">
+        <g id="DESIGN" transform="translate(-580.000000, 0.000000)" fill="#F6F6F6" fill-rule="nonzero">
+            <g id="BLOCK-2" transform="translate(580.000000, 1402.000000)">
+                <g id="PROJECT" transform="translate(0.000000, 160.000000)">
+                    <g id="CTA" transform="translate(113.000000, 565.000000)">
+                        <g id="keyboard-right-arrow-button" transform="translate(82.000000, 40.000000)">
+                            <polygon id="Shape" points="1.80589681 0 0 1.75 5.93366093 7.5 0 13.25 1.80589681 15 9.54545455 7.5"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

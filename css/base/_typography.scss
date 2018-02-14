@@ -1,0 +1,131 @@
+.heading-primary {
+    font-size: 3.167rem;
+    line-height: 3.8333rem;
+    font-family: $font-bck;
+    color: $color-black;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    @include atSmall {
+        font-size: 2.375rem;
+        line-height: 2.875rem;
+    }
+    @include atMedium {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+}
+
+.heading-secondary {
+    font-family: $font-bck;
+    color: $color-primary;
+    font-size: 8.167rem;
+    line-height: 11.167rem;
+    text-shadow: -5px 5px 0px $color-primary-lighter;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    @include atSmall {
+        font-size: 7.375rem;
+        line-height: 10.0625rem;
+        text-shadow: -8px 8px 0px $color-primary-lighter;
+    }
+    @include atMedium {
+        font-size: 13rem;
+        line-height: 17.75rem;
+        text-shadow: -16px 16px 0px $color-primary-lighter;
+    }
+
+    &--inv {
+        @include atSmall {
+            text-shadow: 8px 8px 0px $color-primary-lighter;
+        }
+        @include atMedium {
+            text-shadow: 10px 16px 0px $color-primary-lighter;
+        }
+    }
+
+    &--alt {
+        font-size: 5.25rem;
+        line-height: 7.167rem;
+        @include atSmall {
+            font-size: 7.375rem;
+            line-height: 10.0625rem;
+            text-shadow: 8px 8px 0px $color-primary-lighter;
+        }
+        @include atMedium {
+            font-size: 10rem;
+            text-shadow: 16px 16px 0px $color-primary-lighter;
+        }
+        @include atLarge {
+            font-size: 12.6875rem;
+            line-height: 17.3125rem;
+        }
+    }
+}
+
+.heading-tertiary {
+    font-family: $font-bck;
+    color: $color-black;
+    font-size: 2.667rem;
+    line-height: 3.667rem;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    @include atSmall {
+        font-size: 2rem;
+        line-height: 2.75rem;
+    }
+
+    &--alt {
+        font-size: 4rem;
+        line-height: 4.667rem;
+        @include atSmall {
+            font-size: 3rem;
+            line-height: 3.5rem;
+        }
+    }
+}
+
+.paragraph {
+    font-family: $font-hvy;
+    color: $color-black;
+    font-size: 1.833rem;
+    line-height: 2.8333rem;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    @include linkStates($color-black, none);
+    @include atSmall {
+        font-size: 1.125rem;
+        line-height: 1.5625rem;
+    }
+    @include atMedium {
+        font-size: 1rem;
+        line-height: 1.375rem;
+    }
+
+    & + & {
+        margin-top: 2.5rem;
+        @include atSmall {
+            margin-top: 1.875rem;
+        }
+    }
+
+    &--small {
+        font-size: 1.333rem;
+        line-height: 1.833rem;
+        @include atSmall {
+            font-size: 1rem;
+            line-height: 1.375rem;
+        }
+        @include atMedium {
+            font-size: 0.75rem;
+            line-height: 1rem;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.menu {
+    &__item {
+        font-family: $font-bck;
+        font-weight: 800;
+        color: $color-black-lighter;
+        font-size: 5.167rem;
+        line-height: 7.0833rem;
+        transition: all .25s;
+        cursor: pointer;
+        position: relative;
+        @include atSmall {
+            font-size: 7.375rem;
+            line-height: 10.0625rem;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            height: 2px;
+            width: 200vw;
+            background-color: $color-gray-dark;
+            position: absolute;
+            left: -50vw;
+            transition: all .25s;
+            opacity: 0;
+        }
+
+        &:before {
+            top: 1.125rem;
+            @include atSmall {
+                top: 1.875rem;
+            }
+        }
+
+        &:after {
+            bottom: 1.55rem;
+            @include atSmall {
+                bottom: 2.5rem;
+            }
+        }
+
+        &:hover {
+            color: $color-primary;
+
+            &:before,
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.title {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1.333rem;
+    @include atSmall {
+        padding-left: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0.5rem;
+        left: -15px;
+        height: 5rem;
+        width: 1.333rem;
+        background-color: $color-primary;
+        @include atSmall {
+            height: 3.75rem;
+            width: 1rem;
+            left: 0;
+        }
+        @include atMedium {
+            height: 4.6875rem;
+        }
+    }
+
+    &--alt {
+        @include atSmall {
+            padding-left: 2.375rem;
+        }
+
+        &:before {
+            width: 10px;
+            height: 6.667rem;
+            @include atSmall {
+                height: 5rem;
+            }
+        }
+    }
+
+    &--height {
+        &:before {
+            height: 75%;
+        }
+    }
+}

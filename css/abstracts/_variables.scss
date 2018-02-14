@@ -1,0 +1,40 @@
+// Fonts
+@font-face {
+    font-family: "AvenirBlack";
+    src: url("../fonts/AvenirBlack.ttf");
+}
+
+@font-face {
+    font-family: "AvenirHeavy";
+    src: url("../fonts/AvenirHeavy.ttf");
+}
+
+@font-face {
+    font-family: "LoveloBlack";
+    src: url("../fonts/LoveloBlack.ttf");
+}
+
+$font-bck: "AvenirBlack", "Helvetica", "Arial", sans-serif;
+$font-hvy: "AvenirHeavy", "Helvetica", "Arial", sans-serif;
+$font-alt: "LoveloBlack", "Helvetica", "Arial", sans-serif;
+
+// Colors
+$color-primary: #565BE7;
+$color-primary-light: rgba($color-primary, .4);
+$color-primary-lighter: rgba($color-primary, .1);
+
+$color-black: #3D4147;
+$color-black-light: rgba($color-black, .2);
+$color-black-lighter: rgba($color-black, .1);
+
+$color-gray: #EFEFEF;
+$color-gray-light: #F6F6F6;
+$color-gray-dark: rgba(#D8D8D8, .5);
+
+$color-white: #FFF;
+
+// Heights
+$height-body-sm: 400rem;
+$height-body-md: 400rem;
+$height-body-lg: 400rem;
+$height-body-xlg: 400rem;

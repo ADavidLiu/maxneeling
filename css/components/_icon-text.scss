@@ -1,0 +1,14 @@
+.icon-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__icon {
+        color: rgba(#010002, .1);
+        font-size: 2rem;
+        margin-right: 5px;
+        @include atSmall {
+            font-size: 0.875rem;
+        }
+    }
+}

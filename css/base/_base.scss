@@ -1,0 +1,57 @@
+html,
+body {
+    background-color: $color-gray-light;
+    overflow-x: hidden;
+    font-size: 12px;
+    @include atSmall {
+        font-size: 16px;
+    }
+}
+
+body {
+    background-image: url("../images/Background-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    overflow: hidden;
+    @include atSmall {
+        background-image: url("../images/Background.jpg");
+        background-position: center 0px;
+        background-size: cover;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul,
+ol,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+input,
+button {
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+    text-shadow: 0 0 5px $color-black;
+}

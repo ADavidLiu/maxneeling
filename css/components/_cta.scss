@@ -1,0 +1,48 @@
+.cta {
+    height: 5.5833rem;
+    width: 18.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: $color-primary;
+    box-shadow: 0 0 14px 0 rgba(51,51,51,0.50);
+    font-size: 1.667rem;
+    font-family: $font-hvy;
+    line-height: 2.25rem;
+    padding-bottom: 8px;
+    padding-right: 14px;
+    position: relative;
+    @include linkStates($color-gray-light, none);
+    @include atSmall {
+        height: 4.1875rem;
+        width: 13.875rem;
+        font-size: 1.25rem;
+        line-height: 1.6875rem;
+    }
+    @include atMedium {
+        font-size: 1.125rem;
+        line-height: 1.5625rem;
+    }
+
+    &__icon {
+        transform: translate(-8px, -5px);
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: -9px;
+        border: 5px solid rgba($color-primary, .5);
+        width: 100%;
+        height: 100%;
+        transition: all .25s;
+    }
+
+    &:hover {
+        &:before {
+            top: 5px;
+            left: -5px;
+        }
+    }
+}

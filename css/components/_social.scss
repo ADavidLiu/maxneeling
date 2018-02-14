@@ -1,0 +1,38 @@
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+        & + & {
+            margin-left: 1.5rem;
+            @include atSmall {
+                margin-left: 0.9375rem;
+            }
+        }
+    }
+
+    &__link {
+        border-radius: 50%;
+        background-color: $color-gray-light;
+        height: 4.667rem;
+        width: 4.667rem;
+        box-shadow: 0 10px 5px rgba(#A6A6A6, .5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        transition: all .25s;
+        @include linkStates($color-primary, none);
+        @include atSmall {
+            height: 2.9375rem;
+            width: 2.9375rem;
+            font-size: 1.25rem;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+}

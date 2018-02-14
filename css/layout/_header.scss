@@ -1,0 +1,192 @@
+.header {
+    padding: 2.75rem 1.5rem;
+    margin-bottom: 5.833rem;
+    @include atSmall {
+        margin-bottom: 4.375rem;
+        padding: 4.375rem;
+        padding-bottom: 0;
+        position: relative;
+        height: 100vh;
+    }
+    @include atMedium {
+        margin-bottom: 12.3125rem;
+    }
+    @include atExtralargeHeight {
+        height: 900px;
+        margin-bottom: 5rem;
+    }
+
+    &__container {
+        position: relative;
+        @include atSmall {
+            height: 100%;
+        }
+
+        &:before,
+        &:after {
+            @include atSmall {
+                content: "";
+                position: absolute;
+                top: -50vh;
+                width: 2px;
+                height: $height-body-sm;
+                background-color: $color-gray-dark;
+            }
+            @include atMedium {
+                height: $height-body-md;
+            }
+            @include atLarge {
+                height: $height-body-lg;
+            }
+            @include atExtralarge {
+                height: $height-body-xlg;
+            }
+        }
+
+        &:before {
+            left: 15px;
+        }
+
+        &:after {
+            right: 15px;
+        }
+    }
+
+    &__row {
+        @include atSmall {
+            height: 100%;
+        }
+
+        &:before,
+        &:after {
+            @include atMedium {
+                content: "";
+                position: absolute;
+                top: -50vh;
+                width: 2px;
+                height: $height-body-sm;
+                background-color: $color-gray-dark;
+            }
+            @include atMedium {
+                height: $height-body-md;
+            }
+            @include atLarge {
+                height: $height-body-lg;
+            }
+            @include atExtralarge {
+                height: $height-body-xlg;
+            }
+        }
+
+        &:after {
+            right: 120px;
+        }
+
+        &:before {
+            right: calc(120px + 2.375rem) !important;
+        }
+    }
+
+    &__col {
+        @include atSmall {
+            height: 100%;
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 4.9167rem;
+        height: 4.9167rem;
+        margin-bottom: 5.0833rem;
+        @include atSmall {
+            width: 6.5rem;
+            height: 6.5rem;
+            max-width: 104px;
+            margin-bottom: 1.0625rem;
+        }
+        @include atMedium {
+            margin-bottom: 4.6875rem;
+            position: relative;
+        }
+
+        &-img {
+            width: 100%;
+            height: auto;
+        }
+
+        &:before,
+        &:after {
+            @include atMedium {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: -2px;
+                width: 2px;
+                height: $height-body-md;
+                background-color: $color-gray-dark;
+                transform: translateY(-50vh);
+            }
+            @include atLarge {
+                height: $height-body-lg;
+            }
+            @include atExtralarge {
+                height: $height-body-xlg;
+            }
+        }
+
+        &:after {
+            @include atMedium {
+                transform: translate(2.375rem, -50vh);
+            }
+        }
+    }
+
+    &__nav {
+        margin-bottom: 3.9167rem;
+        @include atSmall {
+            margin-bottom: 2.0625rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @include atMedium {
+            max-width: 615px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+        }
+    }
+
+    &__scroll {
+        margin-bottom: 8.5rem;
+        position: relative;
+        bottom: -3.9167rem;
+        left: 50%;
+        display: inline-block;
+        transform: translateX(-50%) rotate(90deg);
+        cursor: pointer;
+        transition: all .25s;
+        @include atSmall {
+            bottom: -2.0625rem;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -14px;
+            transform: translateX(100%);
+            height: 3px;
+            width: 2.833rem;
+            background-color: $color-black;
+            @include atSmall {
+                width: 2.125rem;
+            }
+        }
+
+        &:hover {
+            transform: translate(-50%, 1rem) rotate(90deg);
+        }
+    }
+}
